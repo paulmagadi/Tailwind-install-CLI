@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Landing Page</title>
+    <link rel="stylesheet" href="dist/output.css" />
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- Navbar -->
+    <!-- Responsive Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-blue-600">Paul Magadi</div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="block text-blue-600 font-semibold">Home</a>
+                <a href="#" class="hover:text-blue-600">Features</a>
+                <a href="#" class="hover:text-blue-600">About</a>
+                <a href="#" class="hover:text-blue-600">Contact</a>
+            </div>
+
+            <!-- Hamburger & Close Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <!-- Hamburger Icon -->
+                <svg id="menu-icon" class="w-6 h-6 text-gray-700 block" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+
+                <!-- Close Icon -->
+                <svg id="close-icon" class="w-6 h-6 text-gray-700 hidden" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu with animation -->
+        <div id="mobile-menu"
+            class="md:hidden hidden flex-col px-4 pb-4 space-y-2 transition-all duration-300 ease-in-out">
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Features</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">About</a>
+            <a href="#" class="block text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gray-50 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Build fast with Tailwind CSS</h1>
+        <p class="mt-4 text-lg text-gray-600">A simple and powerful utility-first CSS framework for modern UI design.
+        </p>
+        <div class="mt-6 space-x-4">
+            <a href="#" class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700">Get Started</a>
+            <a href="#" class="px-6 py-3 border rounded-full hover:bg-gray-100">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Fast Setup</h3>
+                <p class="text-gray-600">Get started in seconds with minimal configuration.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Customizable</h3>
+                <p class="text-gray-600">Extend or customize everything to suit your needs.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-blue-600">Responsive</h3>
+                <p class="text-gray-600">Mobile-first design built right into the framework.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Testimonial Section -->
+    <section class="bg-gray-50 py-20 text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">What developers are saying</h2>
+            <blockquote class="italic text-gray-700 text-lg">
+                “Tailwind has completely changed the way I build websites. I feel faster and more confident in my
+                designs.”
+            </blockquote>
+            <p class="mt-4 font-semibold text-blue-600">— Happy Developer</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-6 text-center text-sm text-gray-600">
+        &copy; 2025 paulmagadi. All rights reserved.
+    </footer>
+
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+      
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+          menu.classList.toggle('flex');
+      
+          if (menu.classList.contains('flex')) {
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+          } else {
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          }
+        });
+      </script>
+      
+
+
+</body>
+
+</html>
