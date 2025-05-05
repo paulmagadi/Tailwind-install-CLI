@@ -3,21 +3,26 @@
 ## 1. Create your project folder
 
 bash
+
 `mkdir myapp`
+
 `cd myapp`
 
 shell
+
 `New-Item myapp -ItemType Directory`
 `cd myapp`
 
 ## 2. Initialize npm
-
 bash
+
 `npm init -y`
+
 This creates a package.json file.
 
 ## 3. Install Tailwind CSS and required tools
 bash
+
 `npm install tailwindcss @tailwindcss/cli`
 
 ## 4. Create Project Structure
@@ -73,16 +78,19 @@ json
 ## 8. Run Tailwind CSS Compiler
 
 bash
+
 `npm run dev  # Development (watch mode)`
+
 or
+
 `npm run build # Production (minified)`
 
 
 # Deployment
-
 Install the gh-pages package:
 
 bash
+
 `npm install --save-dev gh-pages`
 
 
@@ -95,8 +103,8 @@ bash
 ```
 
 ## Deploy the project:
-
 bash
+
 `npm run deploy`
 
 Push the codes to github, the website will be deployed to github pages using  *branch* **gh-pages**
