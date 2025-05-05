@@ -76,3 +76,27 @@ bash
 `npm run dev  # Development (watch mode)`
 or
 `npm run build # Production (minified)`
+
+
+# Deployment
+
+Install the gh-pages package:
+
+bash
+`npm install --save-dev gh-pages`
+
+
+##  Update Build Script in package.json
+```
+"scripts": {
+  ...
+  "deploy": "npm run build && gh-pages -d ."
+}
+```
+
+## Deploy the project:
+
+bash
+`npm run deploy`
+
+Push the codes to github, the website will be deployed to github pages using  *branch* **gh-pages**
